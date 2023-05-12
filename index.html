@@ -8,14 +8,25 @@
        <link href="css/pre.css" rel="stylesheet">
        <link href="css/main.css" rel="stylesheet">
        <style>
- li.my-list{
-   background-color:orange;
+            div#id-div{
+                background-color:yellow;
+            }
+
+            li.my-list{
+                background-color:orange;
+           }
+           div#new-div, li.new-list{
+                 background-color:blue;
+           }
+           ul.my-kids > li{
+                background-color:green;
            }
        </style>
    </head>
    <body>
        <header>
           
+        
            <h1 class="page-header">CSS Selectors by NAME HERE</h1>
           
        <nav>
@@ -23,6 +34,7 @@
                <li><a href="#id">id</a></li>
                <li><a href="#class">class</a></li>
                <li><a href="#compound">compound</a></li>
+               <li><a href="#child">compound</a></li>
            </ul>
        </nav>
    </header>          
@@ -30,7 +42,7 @@
 
 
        <fieldset>
-           <legend><a id="id">id</a></legend>
+           <legend><a id="id">Id</a></legend>
            <p>ids can be applied to only one item on a page</p>
            <p>Here's how we hook an id attribute to an element:</p>
            <pre><code>id="id-div"</code></pre>
@@ -38,14 +50,14 @@
            <pre><code>div#id-div{
    background-color:yellow;
 }</code></pre>
-
+ 
            <p>Here's what it looks like:</p>
            <div id="id-div">Inside my-div</div>
        </fieldset>
 
 
        <fieldset>
-           <legend><a id="class">class</a></legend>
+           <legend><a id="class">Class</a></legend>
            <p>classes can be applied to more than one item on a page</p>
            <p>Here's how we hook a class attribute to an element:</p>
            <pre><code> class="my-list"</code></pre>
@@ -53,9 +65,6 @@
            <pre><code>li.my-list{
    background-color:orange;
 }</code></pre>
-
-
-
 
            <p>Here's what it looks like:</p>
           <div>
@@ -66,6 +75,43 @@
            </ul>
           </div>
        </fieldset>
+
+
+
+       <fieldset>
+        <legend><a id="compound">Compound</a></legend>
+        <p>Compound selectors allow us to use more than one selector for a set of rules. The sections must be separated by commas.</p>
+        <p>Here's how the CSS is applied to the element:</p>
+        <pre><code>div#new-div, li.new-list{
+background-color:blue;
+}</code></pre>
+        <p>Here's what it looks like:</p>
+        <div id="new-div"> I'am inside a div with an id of new-div </div>
+       <div>
+        <ul>
+            <li class= "new-list"> i am inside li with a class named new-list </li>
+            <li class= "new-list"> i am inside li with a class named new-list </li>
+            <li class= "new-list"> i am inside li with a class named new-list </li>
+        </ul>
+       </div>
+    </fieldset>
+<fieldset>
+        <legend><a id="child">Child</a></legend>
+        <p> The child selector allows us to access the elements that are immediately inside the current element.</p>
+        <p>Here's how the CSS is applied to the element:</p>
+        <pre><code> ul.my-kids > li{
+            background-color:green;
+       }</code></pre>
+        <p>Here's what it looks like:</p>
+
+       <div>
+        <ul class="my-kids">
+            <li> i am inside li  that is a child of a ul with a class of my-kids </li>
+            <li> i am inside li  that is a child of a ul with a class of my-kids </li>
+            <li> i am inside li  that is a child of a ul with a class of my-kids </li>
+        </ul>
+       </div>
+    </fieldset>
 
 
        <footer class="page-footer">
