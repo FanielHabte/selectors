@@ -13,6 +13,10 @@ body {
     padding:1%;
 }
 
+
+div #id-div{
+    background-color:yellow;
+}
 h1.page-header{
     font-family:'Inknut Antiqua',serif;
     width:80%;
